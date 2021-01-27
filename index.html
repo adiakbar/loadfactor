@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Load Factor - Damri Pontianak</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-full bg-blue-img">
+	<div class="container">
+		<div class="header-logo">
+			<img src="logo-damri.png" alt="" style="width: 500px;">
+			<h3 style="font-size: 55px; margin-top: 20px; margin-bottom: 40px; font-weight: 600;">Load Factor Keberangkatan Bus</h3>
+		</div>
+
+		<section id="app">
+			
+			<div class="row">
+				<div class="col-3" v-for="data in rows">
+					<h3>{{data.trayek}}</h3>
+					<div class="card" style="margin-bottom: 20px;">
+						<div class="card-body">
+							<h5 class="card-title">Bus {{data.nobus}} - {{data.layanan}} (Jam {{data.jam}})</h5>
+							<table class="table">
+								<tr>
+									<th>Tanggal</th>
+									<th>Seat</th>
+									<th>PNP</th>
+									<th>LF</th>
+								</tr>
+								<tr style="font-weight: bold;">
+									<td>{{data.tanggal1}}</td>
+									<td>{{data.seat1}}</td>
+									<td>{{data.pnp1}}</td>
+									<td>{{data.lf1}} %</td>
+								</tr>
+								<tr>
+									<td>{{data.tanggal2}}</td>
+									<td>{{data.seat2}}</td>
+									<td>{{data.pnp2}}</td>
+									<td>{{data.lf2}} %</td>
+								</tr>
+								<tr>
+									<td>{{data.tanggal3}}</td>
+									<td>{{data.seat3}}</td>
+									<td>{{data.pnp3}}</td>
+									<td>{{data.lf3}} %</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	</div>
+
+	<script src="vue.min.js"></script>
+	<script src="axios.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
