@@ -13,14 +13,14 @@
 <body class="bg-full bg-blue-img">
 	<div class="container">
 		<div class="header-logo">
-			<img src="logo-damri.png" alt="" style="width: 500px;">
-			<h3 style="font-size: 55px; margin-top: 20px; margin-bottom: 40px; font-weight: 600;">Load Factor Keberangkatan Bus</h3>
+			<img src="logo-damri.png" alt="" style="width: 500px;" class="img-fluid">
+			<h3 style="font-size: 35px; margin-top: 20px; margin-bottom: 40px; font-weight: 600;">Load Factor Keberangkatan Bus</h3>
 		</div>
 
 		<section id="app">
 			
 			<div class="row">
-				<div class="col-3" v-for="data in rows">
+				<div class="col-12 col-sm-3" v-for="data in rows">
 					<h3>{{data.trayek}}</h3>
 					<div class="card" style="margin-bottom: 20px;">
 						<div class="card-body">
